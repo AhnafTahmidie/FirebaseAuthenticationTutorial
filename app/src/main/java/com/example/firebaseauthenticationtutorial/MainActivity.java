@@ -30,5 +30,18 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this, R.layout.sample_listview, R.id.textView3, memberNames);
         listView.setAdapter(adapter);
 
+        btnLogOut.setOnClickListener(view ->{
+            mAuth.signOut();
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+        });
+
+    }
+
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user == null){
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+        }
     }
 }
