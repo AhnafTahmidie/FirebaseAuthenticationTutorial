@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FirebaseAuthenticationTutorial</string>
+    <string-array name="members_name">
+        <item>1. Abdullah Ibne Hanif Arean</item>
+        <item>2. Mehadi Hasan</item>
+        <item>3. Ahnaf Tahmid</item>
+
+    </string-array>
 </resources>
